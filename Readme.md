@@ -12,7 +12,7 @@ You are going to help Santa manage his shipments of presents to (only the nice!)
 We have information about children (their name, in which city they live and how good they behaved in the last year). This data is input into a collection.
 But to get a good working tour plan for Christmas Eve, we'll need to optimize and group kids living in the same city together, to avoid multiple trips to the same place.
 I suggest you attempt to solve this assignment by following the tasks in the order outlined below.
-**Important:** In all tasks you will need to allocate memory. 
+**Important:** In some tasks you will need to allocate memory. 
 Be careful to implement proper delete methods to clean up at the end.
 
 ### Task 1 - Implementing a List
