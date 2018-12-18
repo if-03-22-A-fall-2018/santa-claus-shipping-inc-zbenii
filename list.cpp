@@ -1,16 +1,6 @@
 #include <stdlib.h>
 #include "list.h"
 
-struct _node {
-  void* data;
-  struct _node* next;
-};
-
-struct _list{
-  Node* _head;
-};
-
-
 List* list_create(){
   List* list=(List*)malloc(sizeof(struct _list));
   return list;
@@ -40,7 +30,6 @@ void list_insert_after(Node *node, void *data){
 
   newNode->next=node->next;
   node->next=newNode;
-
 
 }
 

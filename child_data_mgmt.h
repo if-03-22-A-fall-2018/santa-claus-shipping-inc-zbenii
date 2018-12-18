@@ -3,6 +3,7 @@
 #define SANTACLAUS_CHILDDATAMGMT_H
 
 #include "list.h"
+#include <stdlib.h>
 
 typedef struct _childData {
     const char* city;
@@ -10,7 +11,11 @@ typedef struct _childData {
     double goodness;
 } ChildData;
 
-typedef struct _childDataMgmt ChildDataMgmt;
+typedef struct _childDataMgmt{
+
+  List* childList=(List*)malloc(sizeof(struct _list));
+
+} ChildDataMgmt;
 
 /**
  * Creates a structure for child data management
