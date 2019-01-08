@@ -12,7 +12,10 @@ void cdm_add_data(ChildDataMgmt *cdm, ChildData *data){
   Node* node=(Node*)malloc(sizeof(struct _node));
   node->data=data;
 
-  if(cdm->childList->_head==0){cdm->childList->_head=node;}
+  if(cdm->childList->_head==0)
+  {
+    cdm->childList->_head=node;
+  }
   else
   {
     node->next=cdm->childList->_head;
