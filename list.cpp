@@ -1,6 +1,15 @@
 #include <stdlib.h>
 #include "list.h"
 
+struct _node {
+  void* data;
+  struct _node* next;
+};
+
+struct _list{
+  Node* _head;
+};
+
 List* list_create(){
   List* list=(List*)malloc(sizeof(struct _list));
   return list;
@@ -38,13 +47,22 @@ return list->_head;
 }
 
 Node* list_get_next(Node *node){
-  if(node!=0)
-  {
-    return node->next;
-  }
-  return 0;
+  return node->next;
 }
 
 void* list_get_data(Node *node){
- return node->data;
+  return node->data;
+}
+
+int list_get_length(List* list){
+  int count = 0;
+
+  Node* currentNode = list->_head;
+
+  while(currentNode != 0){
+    count++;
+    currentNode = currentNode->next;
+  }
+
+  return count;
 }

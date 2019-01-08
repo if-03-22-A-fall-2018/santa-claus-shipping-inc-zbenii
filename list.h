@@ -4,14 +4,6 @@
 typedef struct _list List;
 typedef struct _node Node;
 
-struct _node {
-  void* data;
-  struct _node* next;
-};
-
-struct _list{
-  Node* _head;
-};
 
 /**
  * Used to create a list structure
@@ -50,5 +42,7 @@ Node* list_get_next(Node *node);
  * (hint: you'll probably won't be able to use this void* without casting)
  */
 void* list_get_data(Node *node);
+
+int list_get_length(List* list);
 
 #endif //SANTACLAUS_LIST_H

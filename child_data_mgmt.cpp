@@ -32,7 +32,7 @@ void cdm_add_data(ChildDataMgmt *cdm, ChildData *data){
    if(lastCityNode == 0){
      list_add(cdm->childList, data);
    }
-   
+
    else{
      list_insert_after(lastCityNode, data);
  }
@@ -40,9 +40,10 @@ void cdm_add_data(ChildDataMgmt *cdm, ChildData *data){
 }
 
 Node* cdm_get_sorted_data(ChildDataMgmt *cdm){
-return 0;
+return list_get_first(cdm->childList);
 }
 
 void cdm_delete(ChildDataMgmt *cdm){
-free(cdm);
+  list_delete(cdm->childList);
+  free(cdm);
 }
