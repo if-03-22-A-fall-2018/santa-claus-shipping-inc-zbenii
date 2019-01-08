@@ -38,7 +38,11 @@ return list->_head;
 }
 
 Node* list_get_next(Node *node){
-return node->next;
+  if(node!=0)
+  {
+    return node->next;
+  }
+  return 0;
 }
 
 void* list_get_data(Node *node){
