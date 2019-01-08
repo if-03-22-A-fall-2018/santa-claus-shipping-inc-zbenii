@@ -11,11 +11,7 @@ typedef struct _childData {
     double goodness;
 } ChildData;
 
-typedef struct _childDataMgmt{
-
-  List* childList=(List*)malloc(sizeof(struct _list));
-
-} ChildDataMgmt;
+typedef struct _childDataMgmt ChildDataMgmt;
 
 /**
  * Creates a structure for child data management
